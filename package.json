@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "npm run build && git checkout gh-pages && git add -f dist && git commit -m 'Update build for GitHub Pages' && git push origin gh-pages && git checkout main"
+    "preview": "vite preview"
   },
   "dependencies": {
     "globe.gl": "^2.41.1",
