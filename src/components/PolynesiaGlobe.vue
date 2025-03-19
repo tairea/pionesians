@@ -113,6 +113,13 @@ const arcData = [{
   endLng: -171.7513,
   color: [`rgba(186, 255, 201, 1)`, `rgba(186, 255, 201, 1)`], // Using Cook Islands color
   height: getArcHeight(-20.1361, -157.3458, -13.8506, -171.7513)
+}, {
+  startLat: 5.7923, // Jericho, Colombia
+  startLng: -75.5417,
+  endLat: -20.1361, // Mauke, Cook Islands
+  endLng: -157.3458,
+  color: [`rgba(255, 228, 186, 1)`, `rgba(255, 228, 186, 1)`], // Using pastel orange
+  height: getArcHeight(5.7923, -75.5417, -20.1361, -157.3458)
 }]
 
 onMounted(async () => {
@@ -120,7 +127,7 @@ onMounted(async () => {
     // Fetch base countries data and islands data
     const [countries, islandsData] = await Promise.all([
       fetch('https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson').then(res => res.json()),
-      fetch('/src/assets/islands.geojson').then(res => res.json())
+      fetch('/pionesians/src/assets/islands.geojson').then(res => res.json())
     ])
     
     const globe = Globe()
