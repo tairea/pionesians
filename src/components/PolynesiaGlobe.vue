@@ -127,7 +127,7 @@ onMounted(async () => {
     // Fetch base countries data and islands data
     const [countries, islandsData] = await Promise.all([
       fetch('https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson').then(res => res.json()),
-      fetch('/pionesians/src/assets/islands.geojson').then(res => res.json())
+      fetch('/pionesians/data/islands.geojson').then(res => res.json())
     ])
     
     const globe = Globe()
